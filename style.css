@@ -196,12 +196,12 @@ ul li {
         margin-top: 20px;
         text-align: center;
         flex: 0 0 150px; /* Kisebb kép mobilon */
-        margin-left: 60px;
+        
     }
 
     #bemutatkozas .profile-picture img {
         width: 50%; /* Kisebb kép mobilon */
-	margin-left: 60px;
+	
     }
 }
 
