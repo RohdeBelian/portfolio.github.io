@@ -178,8 +178,7 @@ ul li {
 #bemutatkozas .profile-picture img {
     width: 100%; /* A kép kitölti a szülő konténer teljes szélességét */
     height: auto; /* A kép magassága automatikus */
-    border-radius: 50%; /* Kör alakú kép */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Árnyék a kép mögött */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Árnyék a kép mögött */
 }
 
 /* Reszponzív stílusok mobilra */
