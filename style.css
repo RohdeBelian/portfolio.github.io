@@ -17,18 +17,19 @@ body {
     background-size: cover; /* A kép kitöltése a háttérben */
     background-position: center; /* A kép középre igazítása */
     background-repeat: no-repeat; /* A kép ismétlésének letiltása */
-    height: 100vh; /* A háttérkép magasságának beállítása */
+    min-height: 100vh; /* Minimum magasság 100vh, hogy a háttérkép a lap végéig érjen */
 }
 
-
+/* A header elem stílusai */
 header {
-    background-color: #3D52A0;
+    background-color: rgba(61, 82, 160, 0.8); /* Átlátszó háttér szín */
     color: #fff;
     padding: 20px 0;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Navigációs lista stílusai */
 nav ul {
     list-style: none;
     padding: 0;
@@ -55,7 +56,7 @@ nav ul li a:hover {
 .section {
     margin: 40px auto;
     padding: 40px;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.9); /* Fehér háttér a dobozoknak */
     border-radius: 15px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     width: 90%;
@@ -68,6 +69,7 @@ nav ul li a:hover {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
+/* Címek stílusai */
 h1, h2, h3 {
     color: #2b3a72;
     margin-bottom: 20px;
@@ -76,7 +78,6 @@ h1, h2, h3 {
 
 h1 {
     font-size: 32px;
-    color: #2b3a72;
 }
 
 h2 {
@@ -85,7 +86,6 @@ h2 {
 
 h3 {
     font-size: 24px;
-    color: #2b3a72;
 }
 
 p {
