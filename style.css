@@ -257,3 +257,7 @@ ul li {
         max-width: 22%; /* Négy képet jelenít meg egymás mellett */
     }
 }
+
+html {
+    scroll-behavior: smooth; /* Simább görgetés */
+}
