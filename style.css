@@ -195,13 +195,14 @@ ul li {
     #bemutatkozas .profile-picture {
         margin-top: 20px;
         text-align: center;
-        flex: 0 0 150px; /* Kisebb kép mobilon */
-        margin-left: 30px;
+        flex: 0 0 auto; /* Make the container auto width */
+        /* Remove margin-left: 60px; */
     }
 
     #bemutatkozas .profile-picture img {
-        width: 70%; /* Kisebb kép mobilon */
-	
+        width: 150px; /* Adjust to a suitable size */
+        max-width: 100%;
+        /* Remove margin-left: 60px; */
     }
 }
 
