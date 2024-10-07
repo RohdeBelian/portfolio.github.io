@@ -173,12 +173,13 @@ ul li {
 #bemutatkozas .profile-picture {
     flex: 0 0 200px; /* A profilkép szélessége legyen 200px */
     text-align: right;
+    margin-right: 60px
 }
 
 #bemutatkozas .profile-picture img {
     width: 100%; /* A kép kitölti a szülő konténer teljes szélességét */
     height: auto; /* A kép magassága automatikus */
-   
+}
 
 /* Reszponzív stílusok mobilra */
 @media (max-width: 768px) {
@@ -200,5 +201,58 @@ ul li {
 
     #bemutatkozas .profile-picture img {
         width: 50%; /* Kisebb kép mobilon */
+	margin-left: 60px;
+    }
+}
+
+/* Alapstílusok a képekhez és a galériahoz */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Középre igazítja a képeket */
+    gap: 20px; /* Távolság a képek között */
+    margin-top: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Képek sarkainak lekerekítése */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Finom árnyék a képek köré */
+    max-width: 300px; /* Képek maximális szélessége nagy képernyőkön */
+    transition: transform 0.3s ease; /* Finom animáció hover esetén */
+}
+
+.gallery img:hover {
+    transform: scale(1.05); /* Kicsit felnagyítja a képet hover esetén */
+}
+
+/* Mobilra optimalizálás */
+@media (max-width: 600px) {
+    .gallery {
+        flex-direction: column; /* Egymás alá rendezi a képeket kisebb képernyőkön */
+        align-items: center; /* Középre igazítja a képeket */
+    }
+    
+    .gallery img {
+        max-width: 90%; /* Mobilon szélesebbek lesznek a képek */
+    }
+}
+
+/* Tabletre optimalizálás */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .gallery {
+        justify-content: space-between; /* Jobban elosztja a képeket tableten */
+    }
+    
+    .gallery img {
+        max-width: 45%; /* Két képet jelenít meg egymás mellett */
+    }
+}
+
+/* Nagy képernyőkre */
+@media (min-width: 1025px) {
+    .gallery img {
+        max-width: 22%; /* Négy képet jelenít meg egymás mellett */
     }
 }
