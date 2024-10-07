@@ -173,7 +173,7 @@ ul li {
 #bemutatkozas .profile-picture {
     flex: 0 0 200px; /* A profilkép szélessége legyen 200px */
     text-align: right;
-    margin-right: 60px
+    
 }
 
 #bemutatkozas .profile-picture img {
