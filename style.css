@@ -11,13 +11,24 @@ body {
     padding: 0;
     margin: 0;
     color: #333;
+    background: linear-gradient(-45deg, #3D52A0, #7091E6, #8697C4, #ADBBDA);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+}
 
-    /* Háttérkép beállítása */
-    background-image: url('background.jpg'); /* A háttérkép URL-je */
-    background-size: cover; /* A kép kitöltése a háttérben */
-    background-position: center; /* A kép középre igazítása */
-    background-repeat: no-repeat; /* A kép ismétlésének letiltása */
-    min-height: 100vh; /* Minimum magasság 100vh, hogy a háttérkép a lap végéig érjen */
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+ 
+    50% {
+        background-position: 100% 50%;
+    }
+ 
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 /* A header elem stílusai */
