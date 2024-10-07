@@ -22,11 +22,11 @@ body {
     0% {
         background-position: 0% 50%;
     }
- 
+
     50% {
         background-position: 100% 50%;
     }
- 
+
     100% {
         background-position: 0% 50%;
     }
@@ -154,5 +154,52 @@ ul li {
     .section {
         padding: 20px;
         margin: 20px;
+    }
+}
+
+/* Bemutatkozás szekció */
+#bemutatkozas .content-container {
+    display: flex;
+    justify-content: space-between; /* A szöveg és a kép között teret hagy */
+    align-items: center; /* Képet és szöveget középre igazít */
+    flex-wrap: wrap; /* Mobilon tördelje le a szöveget és a képet egymás alá */
+}
+
+#bemutatkozas .text {
+    flex: 1; /* A szöveg kitölti a maradék helyet */
+    margin-right: 20px; /* Térköz a kép és a szöveg között */
+}
+
+#bemutatkozas .profile-picture {
+    flex: 0 0 200px; /* A profilkép szélessége legyen 200px */
+    text-align: right;
+}
+
+#bemutatkozas .profile-picture img {
+    width: 100%; /* A kép kitölti a szülő konténer teljes szélességét */
+    height: auto; /* A kép magassága automatikus */
+    border-radius: 50%; /* Kör alakú kép */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Árnyék a kép mögött */
+}
+
+/* Reszponzív stílusok mobilra */
+@media (max-width: 768px) {
+    #bemutatkozas .content-container {
+        flex-direction: column; /* Mobilon egymás alá kerül a szöveg és a kép */
+        text-align: center;
+    }
+
+    #bemutatkozas .text {
+        margin-right: 0;
+    }
+
+    #bemutatkozas .profile-picture {
+        margin-top: 20px;
+        text-align: center;
+        flex: 0 0 150px; /* Kisebb kép mobilon */
+    }
+
+    #bemutatkozas .profile-picture img {
+        width: 50%; /* Kisebb kép mobilon */
     }
 }
