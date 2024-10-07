@@ -39,15 +39,18 @@ links.forEach(link => {
 // Email cím másolása a vágólapra
 const emailElement = document.getElementById('email');
 
-emailElement.addEventListener('click', function() {
-    // Készítünk egy textarea-t, hogy a szöveget a vágólapra másolhassuk
-    const tempInput = document.createElement('textarea');
-    tempInput.value = emailElement.textContent; // Email cím lekérése
-    document.body.appendChild(tempInput); // Hozzáadjuk a textarea-t a DOM-hoz
-    tempInput.select(); // Kijelöljük a szöveget
-    document.execCommand('copy'); // Másolás a vágólapra
-    document.body.removeChild(tempInput); // Eltávolítjuk a textarea-t a DOM-ból
+if (emailElement) {
+    emailElement.addEventListener('click', function() {
+        const email = emailElement.textContent; // Email cím lekérése
+        
+        // A clipboard API használata
+        navigator.clipboard.writeText(email).then(function() {
+            alert('Email cím másolva a vágólapra: ' + email);
+        }).catch(function(error) {
+            console.error('Hiba a másolás során: ', error);
+        });
+    });
+} else {
+    console.error("Email element not found");
+}
 
-    // Visszajelzés a felhasználónak (opcionális)
-    alert('Email cím másolva a vágólapra: ' + emailElement.textContent);
-});
