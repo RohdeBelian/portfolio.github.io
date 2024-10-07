@@ -203,6 +203,7 @@ ul li {
         width: 150px; /* Adjust to a suitable size */
         max-width: 100%;
         /* Remove margin-left: 60px; */
+        text-align: center;
     }
 }
 
