@@ -35,3 +35,19 @@ links.forEach(link => {
         });
     });
 });
+
+// Email cím másolása a vágólapra
+const emailElement = document.getElementById('email');
+
+emailElement.addEventListener('click', function() {
+    // Készítünk egy textarea-t, hogy a szöveget a vágólapra másolhassuk
+    const tempInput = document.createElement('textarea');
+    tempInput.value = emailElement.textContent; // Email cím lekérése
+    document.body.appendChild(tempInput); // Hozzáadjuk a textarea-t a DOM-hoz
+    tempInput.select(); // Kijelöljük a szöveget
+    document.execCommand('copy'); // Másolás a vágólapra
+    document.body.removeChild(tempInput); // Eltávolítjuk a textarea-t a DOM-ból
+
+    // Visszajelzés a felhasználónak (opcionális)
+    alert('Email cím másolva a vágólapra: ' + emailElement.textContent);
+});
