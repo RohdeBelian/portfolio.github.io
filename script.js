@@ -16,3 +16,22 @@ function fetchRandomUser() {
         })
         .catch(error => console.log('Error:', error));
 }
+
+// Keresd meg az összes navigációs linket
+const links = document.querySelectorAll('nav ul li a');
+
+// Adjunk hozzá eseménykezelőt minden linkhez
+links.forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault(); // Megakadályozza az alapértelmezett kattintási viselkedést
+
+        const targetId = this.getAttribute('href'); // Az ID, ahova ugrani szeretnél
+        const targetElement = document.querySelector(targetId); // Keresd meg a cél elemet
+
+        // Gördülékeny görgetés a cél elemhez
+        targetElement.scrollIntoView({
+            behavior: 'smooth', // Görgetési stílus
+            block: 'start' // A cél elem kezdő pozíciója
+        });
+    });
+});
