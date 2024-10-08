@@ -54,26 +54,4 @@ if (emailElement) {
     console.error("Email element not found");
 }
 
-/* A testreszabott scrollbar általános beállítása */
-::-webkit-scrollbar {
-    width: 12px; /* A scrollbar szélessége */
-    background-color: #fff; /* A scrollbar háttérszíne fehér */
-}
 
-/* A scroll thumb (fogó rész) stílusai */
-::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, #7091E6, #3D52A0); /* Színátmenetes scrollbar */
-    border-radius: 6px; /* Lekerekített scrollbar */
-    border: 3px solid #fff; /* Fehér szegély, hogy különváljon a scroll */
-}
-
-/* A scroll thumb hover állapotban */
-::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(180deg, #3D52A0, #7091E6); /* Az irány megfordul hover esetén */
-}
-
-/* A scrollbar track (háttér) */
-::-webkit-scrollbar-track {
-    background-color: #fff; /* Fehér háttér */
-    border-radius: 6px;
-}
